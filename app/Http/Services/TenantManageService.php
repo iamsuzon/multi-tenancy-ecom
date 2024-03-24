@@ -10,7 +10,7 @@ class TenantManageService
 {
     public static function getTenants()
     {
-        return Tenant::all();
+        return Tenant::with('tenantDomain')->get();
     }
 
     public static function storeTenants(array $validated_data): array

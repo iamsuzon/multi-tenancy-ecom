@@ -74,7 +74,7 @@
                             <td>{{$tenant->email}}</td>
                             <td>
                                 <div class="button-wrapper d-flex justify-content-center">
-                                    <a class="btn btn-primary btn-sm" href="{{tenant_url_with_protocol($tenant->domain?->domain)}}">{{__('Open')}}</a>
+                                    <a class="btn btn-primary btn-sm" href="{{tenant_url_with_protocol($tenant->tenantDomain?->domain)}}">{{__('Open')}}</a>
                                 </div>
                             </td>
                         </tr>

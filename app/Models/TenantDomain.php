@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class TenantDomain extends Model
 {
     protected $table = 'domains';
-    protected $fillable = ['tenant_id', 'domain'];
+    protected $fillable = ['id', 'tenant_id', 'domain'];
 }

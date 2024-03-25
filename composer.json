@@ -9,6 +9,7 @@
         "ext-pdo": "*",
         "laravel/framework": "^11.0",
         "laravel/tinker": "^2.9",
+        "laravel/ui": "^4.5",
         "stancl/tenancy": "^3.8"
     },
     "require-dev": {

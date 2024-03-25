@@ -13,6 +13,7 @@
             <form class="d-flex gap-3">
                 <a class="nav-link" href="">Cart</a>
                 <a class="nav-link" href="">Login</a>
+                <a class="nav-link" href="">Register</a>
             </form>
         </div>
     </div>

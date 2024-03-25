@@ -10,3 +10,13 @@ function tenant_url_with_protocol($url): string
 
     return $protocol . $url;
 }
+
+function route_prefix(): string
+{
+    if (!empty(tenant()))
+    {
+        return 'tenant.';
+    }
+
+    return 'landlord.';
+}

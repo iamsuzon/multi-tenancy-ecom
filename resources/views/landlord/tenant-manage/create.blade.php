@@ -32,7 +32,7 @@
                         </div>
                     @endif
 
-                    <form method="POST" action="{{route('manage.tenant.store')}}">
+                    <form method="POST" action="{{route('landlord.manage.tenant.store')}}">
                         @csrf
                         <div class="form-group mt-3">
                             <label for="formGroupExampleInput">{{__('Tenant Username')}}</label>
@@ -74,7 +74,7 @@
                             <td>{{$tenant->email}}</td>
                             <td>
                                 <div class="button-wrapper d-flex justify-content-center">
-                                    <a class="btn btn-primary btn-sm" href="{{tenant_url_with_protocol($tenant->tenantDomain?->domain)}}">{{__('Open')}}</a>
+                                    <a class="btn btn-primary btn-sm" href="{{tenant_url_with_protocol($tenant->tenantDomain?->domain)}}" target="_blank">{{__('Open')}}</a>
                                 </div>
                             </td>
                         </tr>

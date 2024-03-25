@@ -16,7 +16,7 @@
                 <div class="welcome-wrapper text-center">
                     <h2>{{__('Landlord Section')}}</h2>
                     <p>Introducing the Landlord Dashboard, a centralized platform for efficient tenant management.</p>
-                    <a class="btn btn-primary mt-2" href="{{route('manage.tenant.create')}}">{{__('Manage Tenants')}}</a>
+                    <a class="btn btn-primary mt-2" href="{{route('landlord.auth.register')}}">{{__('Register')}}</a>
                 </div>
             </div>
         </div>

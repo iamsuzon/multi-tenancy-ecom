@@ -11,11 +11,14 @@
     <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet"/>
 
     <!-- Styles -->
-    <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{global_asset('assets/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{global_asset('assets/css/style.css')}}">
+
     @yield('styles')
 </head>
 <body>
+    @include(route_prefix().'partials.navbar')
     @yield('contents')
-<script src="{{asset('assets/js/bootstrap.bundle.min.js')}}"></script>
+<script src="{{global_asset('assets/js/bootstrap.bundle.min.js')}}"></script>
 </body>
 </html>

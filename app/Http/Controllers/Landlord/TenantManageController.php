@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Landlord;
 
+use App\Http\Controllers\Controller;
 use App\Http\Requests\TenantManageRequest;
 use App\Http\Services\TenantManageService;
-use Illuminate\Http\Request;
 
 class TenantManageController extends Controller
 {
@@ -17,6 +17,7 @@ class TenantManageController extends Controller
 
     public function create()
     {
+        abort_if(!auth('web')->check(), 403);
         $tenants = TenantManageService::getTenants();
         return view('landlord.tenant-manage.create', compact('tenants'));
     }

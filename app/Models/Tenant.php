@@ -12,16 +12,28 @@ class Tenant extends BaseTenant implements TenantWithDatabase
 {
     use HasDatabase, HasDomains;
 
-    protected $fillable = ['id', 'email', 'data'];
+    protected $fillable = ['id', 'email', 'user_id', 'data'];
+
+    protected $casts = [
+        'email' => 'string',
+        'user_id' => 'integer',
+        'data' => 'array'
+    ];
 
     public static function getCustomColumns(): array
     {
         return [
             'id',
             'email',
+            'user_id',
             'created_at',
             'updated_at'
         ];
+    }
+
+    public function scopeOwnTenants($query)
+    {
+        return $query->where('user_id', auth('web')->id());
     }
 
     public function tenantDomain(): HasOne

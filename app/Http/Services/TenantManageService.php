@@ -10,7 +10,7 @@ class TenantManageService
 {
     public static function getTenants()
     {
-        return Tenant::with('tenantDomain')->get();
+        return Tenant::with('tenantDomain')->ownTenants()->get();
     }
 
     public static function storeTenants(array $validated_data): array
@@ -21,6 +21,7 @@ class TenantManageService
             ]);
 
             $tenant->update([
+                'user_id' => auth('web')->id(),
                 'email' => $validated_data['email']
             ]);
 

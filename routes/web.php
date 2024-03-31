@@ -22,10 +22,10 @@ Route::prefix('/')->name('landlord.auth.')->group(function () {
 
 // Admin authentication routes
 Route::prefix('/')->name('landlord.admin.auth.')->group(function () {
-    Route::get('login', [AdminAuthController::class, 'showLoginForm'])->name('login');
-    Route::post('login', [AdminAuthController::class, 'submitLoginForm']);
+    Route::get('admin-login', [AdminAuthController::class, 'showLoginForm'])->name('login');
+    Route::post('admin-login', [AdminAuthController::class, 'submitLoginForm']);
 
-    Route::get('logout', [AdminAuthController::class, 'logout'])->name('logout');
+    Route::get('admin-logout', [AdminAuthController::class, 'logout'])->name('logout');
 });
 
 Route::prefix('dashboard')->name('landlord.')->middleware(RedirectIfUnauthenticated::class)->group(function () {

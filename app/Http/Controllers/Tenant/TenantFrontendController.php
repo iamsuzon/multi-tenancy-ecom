@@ -11,6 +11,8 @@ class TenantFrontendController extends Controller
 {
     public function index()
     {
-        return view('tenant.home');
+        $data = [];
+        
+        return view('tenant.home', $data);
     }
 }
